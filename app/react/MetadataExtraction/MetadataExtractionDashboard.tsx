@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Icon } from 'UI';
 
-import { Translate } from 'app/I18N';
+import { I18NLink, Translate } from 'app/I18N';
 import { notify } from 'app/Notifications/actions/notificationsActions';
 import { store } from 'app/store';
 import Icons from 'app/Templates/components/Icons';
@@ -106,6 +106,15 @@ class MetadataExtractionDashboard extends React.Component<
         </div>
         <div className="panel-subheading">
           <Translate>Extract information from your documents</Translate>
+
+          <I18NLink
+            to="settings/metadata_extraction/suggestions"
+            className="btn btn-success btn-xs"
+          >
+            <Icon icon="search" />
+            &nbsp;
+            <Translate>Find suggestions</Translate>
+          </I18NLink>
         </div>
         <div className="metadata-extraction-table">
           <table className="table">
