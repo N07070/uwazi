@@ -1,6 +1,4 @@
-import { Application, Request, Response, NextFunction } from 'express';
-//@ts-ignore
-import queryTypes from 'query-types';
+import { Application, Request, Response } from 'express';
 
 import { elastic } from 'api/search/elastic';
 import { validateAndCoerceRequest } from 'api/utils/validateRequest';
